@@ -10,6 +10,7 @@ age = st.number_input('What is your age?', min_value=1, max_value=120)
 weight = st.number_input('What is your weight (in kgs)?', min_value=1.0)
 height = st.number_input('What is your height (feet)?', min_value=1.0)
 goal = st.text_input('What is your goal (can be anything health related)?')
+bmr_male = 66 + 13.7 * weight + 5 * height - 6.8 * age
 
 
 
@@ -26,8 +27,7 @@ if st.button('Get advice'):
 
     if response.choices:
         print(response.choices[0])  # Debug print statement
-        bmr_male = 66 + 13.7 * weight + 5 * height - 6.8 * age
-print("Your BMR (Male) is:", bmr_male)
+        print("Your BMR (Male) is:", bmr_male)
 
 if 'text' in response.choices[0]:
             # Display AI response
