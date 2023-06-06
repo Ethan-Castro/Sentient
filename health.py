@@ -32,7 +32,7 @@ print("Your BMR (Male) is:", bmr_male)
 if 'text' in response.choices[0]:
             # Display AI response
             st.write(response.choices[0].text.strip())
-        else:
+    else:
             st.error("AI response does not contain 'text' attribute.")
     else:
         st.error("No choices found in AI response.")
