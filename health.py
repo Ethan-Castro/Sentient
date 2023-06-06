@@ -1,4 +1,4 @@
-openai.api_key = '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'
+openai.api_key = st.secrets['openai_key']
 
 st.title('AI Health Coach')
 
