@@ -1,7 +1,4 @@
-pip install openai
-
-
-import openai
+import openai as openai
 import streamlit as st
 
 openai.api_key = st.secrets['openai_key']
