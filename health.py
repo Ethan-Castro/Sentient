@@ -29,7 +29,7 @@ if st.button('Get advice'):
         bmr_male = 66 + 13.7 * weight + 5 * height - 6.8 * age
 print("Your BMR (Male) is:", bmr_male)
 
-     if 'text' in response.choices[0]:
+if 'text' in response.choices[0]:
             # Display AI response
             st.write(response.choices[0].text.strip())
         else:
