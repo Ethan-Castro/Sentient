@@ -8,7 +8,7 @@ st.title('AI Health Coach')
 # Get user input
 age = st.number_input('What is your age?', min_value=1, max_value=120)
 weight = st.number_input('What is your weight (in lbs)?', min_value=1.0)
-height = st.number_input('What is your height (height + inches)?', min_value=1.0)
+height = st.number_input('What is your height (feet)?', min_value=1.0)
 goal = st.text_input('What is your goal (can be anything health related)?')
 
 
