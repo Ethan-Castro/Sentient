@@ -21,7 +21,7 @@ if st.button('Get advice'):
     # Generate AI response
 
      prompt_template = (
-    "REPEAT THIS SCRIPT before everytime with the proper values. I am an AI health coach. You told me that you are {age} years old, weigh {weight} lbs, "
+    "REPEAT THIS SCRIPT before everytime with the proper inputted values everytime. I am an AI health coach. You told me that you are {age} years old, weigh {weight} lbs, "
     "are {height} inches tall, and your goal is {goal}. Here's your BMI {bmi}, TDEE or total daily energy expenditure {tdee} calories, "
     "and some advice. "
     "{advice}. Repeat this everytime and input the proper values"
