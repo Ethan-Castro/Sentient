@@ -19,7 +19,7 @@ tdee = bmr * sex
 
 if st.button('Get advice'):
     # Generate AI response
-    response = openai.Completion.create(
+  response = openai.ChatCompletion.create(
         model="gpt-4",
         prompt=f"I am an AI health coach. You told me that you are {age} years old, weigh {weight} lbs, are {height} in tall, and your goal is {goal}. Here's your BMI {bmi} , TDEE or total daily energy expenditure {tdee}, and some advice. repeat the first part then put your own advice: ",
         temperature=0.5,
