@@ -14,7 +14,7 @@ goal = st.text_input('What is your goal (can be anything health related)?')
 activity = st.number_input('Rate your activity level from sedentary to very active (from 1.2 - 1.9)?', min_value= 1.2, max_value = 1.9)
 bmi = weight / (height * height) * 703
 bmr = 10 * weight + 6.25 * height - 5 * age - sex
-tdee = bmr * sex
+tdee = bmr * activity
 
 
 if st.button('Get advice'):
