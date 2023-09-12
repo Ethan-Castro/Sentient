@@ -20,15 +20,38 @@ tdee = bmr * sex
 if st.button('Get advice'):
     # Generate AI response
 
+     prompt_template = (
+    "I am an AI health coach. You told me that you are {age} years old, weigh {weight} lbs, "
+    "are {height} in tall, and your goal is {goal}. Here's your BMI {bmi}, TDEE or total daily energy expenditure {tdee}, "
+    "and some advice. I am an AI health coach. You told me that you are {age} years old, weigh {weight} lbs, "
+    "are {height} in tall, and your goal is {goal}. Here's your BMI {bmi}, TDEE or total daily energy expenditure {tdee}, "
+    "{advice}."
+)
+
+user_data = {
+    'age': age,  # Example age
+    'weight': weight,  # Example weight in lbs
+    'height': height,  # Example height in inches
+    'goal': goal,  # Example goal
+    'bmi': bmi,  # Example BMI value
+    'tdee': tdee,  # Example TDEE value
+    'advice': goal
+}
+
     response = openai.Completion.create(
   model="text-davinci-003",
-  prompt= " I am an AI health coach. You told me that you are {age} years old, weigh {weight} lbs, are {height} in tall, and your goal is {goal}. Here's your BMI {bmi} , TDEE or total daily energy expenditure {tdee}, and some advice. repeat the first part then put your own advice: ",
+  prompt= prompt_template.format(**user_data)
   temperature=1,
   max_tokens=256,
   top_p=1,
   frequency_penalty=0,
   presence_penalty=0
 )
+    
+# You can then format this prompt with the specific details:
+
+
+prompt = prompt_template.format(**user_data)
 print(response)  # Debug print statement
 
 if response.choices:
