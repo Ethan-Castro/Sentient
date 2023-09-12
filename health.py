@@ -40,7 +40,7 @@ user_data = {
 
 response = openai.Completion.create(
   model="text-davinci-003",
-  prompt= prompt_template.format(**user_data)
+  prompt= prompt_template.format(**user_data),
   temperature=1,
   max_tokens=256,
   top_p=1,
