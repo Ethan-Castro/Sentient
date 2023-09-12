@@ -6,7 +6,7 @@ openai.api_key = st.secrets['openai_key']
 st.title('AI Health Coach')
 
 # Get user input
-sex = st.number_input('What is your sex? (if male put -5 or female put 161)', min value = -5, max_value = 161)
+sex = st.number_input('What is your sex? (if male put -5 or female put 161)', min_value = -5, max_value = 161)
 age = st.number_input('What is your age?', min_value=1, max_value=100)
 weight = st.number_input('What is your weight (in lbs)?', min_value=1.0)
 height = st.number_input('What is your height (inches)?', min_value=1.0)
