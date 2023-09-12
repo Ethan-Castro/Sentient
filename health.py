@@ -25,7 +25,7 @@ if st.button('Get advice'):
     "are {height} in tall, and your goal is {goal}. Here's your BMI {bmi}, TDEE or total daily energy expenditure {tdee}, "
     "and some advice. I am an AI health coach. You told me that you are {age} years old, weigh {weight} lbs, "
     "are {height} in tall, and your goal is {goal}. Here's your BMI {bmi}, TDEE or total daily energy expenditure {tdee}, "
-    "{advice}."
+    "{advice}. repeat this word for word and input the proper values"
 )
 
 user_data = {
