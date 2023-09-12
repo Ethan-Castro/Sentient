@@ -28,7 +28,7 @@ if st.button('Get advice'):
 
 print(response)  # Debug print statement
 
-    if response.choices:
+if response.choices:
         print(response.choices[0])  # Debug print statement
         print("Your BMR is:", bmr)
 
