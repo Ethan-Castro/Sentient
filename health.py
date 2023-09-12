@@ -38,7 +38,7 @@ user_data = {
     'advice': goal
 }
 
-    response = openai.Completion.create(
+response = openai.Completion.create(
   model="text-davinci-003",
   prompt= prompt_template.format(**user_data)
   temperature=1,
