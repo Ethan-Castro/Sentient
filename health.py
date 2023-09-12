@@ -20,20 +20,15 @@ tdee = bmr * sex
 if st.button('Get advice'):
     # Generate AI response
 
-    response = openai.ChatCompletion.create(
-      model="gpt-4",
-      messages=[
-        {
-                       " I am an AI health coach. You told me that you are {age} years old, weigh {weight} lbs, are {height} in tall, and your goal is {goal}. Here's your BMI {bmi} , TDEE or total daily energy expenditure {tdee}, and some advice. repeat the first part then put your own advice: "
-    
-        }
-      ],
-      temperature=1,
-      max_tokens=256,
-      top_p=1,
-      frequency_penalty=0,
-      presence_penalty=0
-    )
+    response = openai.Completion.create(
+  model="text-davinci-003",
+  prompt= " I am an AI health coach. You told me that you are {age} years old, weigh {weight} lbs, are {height} in tall, and your goal is {goal}. Here's your BMI {bmi} , TDEE or total daily energy expenditure {tdee}, and some advice. repeat the first part then put your own advice: ",
+  temperature=1,
+  max_tokens=256,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0
+)
 print(response)  # Debug print statement
 
 if response.choices:
