@@ -26,7 +26,7 @@ if st.button('Get advice'):
         max_tokens=100
     )
 
-    print(response)  # Debug print statement
+print(response)  # Debug print statement
 
     if response.choices:
         print(response.choices[0])  # Debug print statement
