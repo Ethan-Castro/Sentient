@@ -22,9 +22,7 @@ if st.button('Get advice'):
     # Generate AI response
 
     prompt_template = (
-    " REPEAT THIS SCRIPT before everytime with the sex, age, weight, height, goal, activity, that the USER puts. if it's in brackets put the value they put not the actual word. I am an AI health coach, this is not medical advice. Ok so, you are {age} years old, weigh {weight} lbs, 
-    are {height} inches tall, and your goal is {goal}. Here's your BMI {bmi}, TDEE or total daily energy expenditure {tdee} calories, Repeat everything before and input the proper values
-After repeating the script above: provide a brief easy-to-follow detailed exercise routine, a philosophical motivational quote, a piece of nutrition psychology advice, healthy snacks in list format, and words for consistency. "
+    " REPEAT THIS SCRIPT before everytime with the sex, age, weight, height, goal, activity, that the USER puts. if it's in brackets put the value they put not the actual word. I am an AI health coach, this is not medical advice. Ok so, you are {age} years old, weigh {weight} lbs, are {height} inches tall, and your goal is {goal}. Here's your BMI {bmi}, TDEE or total daily energy expenditure {tdee} calories, Repeat everything before and input the proper values After repeating the script above: provide a brief easy-to-follow detailed exercise routine, a philosophical motivational quote, a piece of nutrition psychology advice, healthy snacks in list format, and words for consistency. "
     "{advice}."
      )
     
