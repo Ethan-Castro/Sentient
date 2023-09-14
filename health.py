@@ -3,7 +3,7 @@ import streamlit as st
 
 openai.api_key = st.secrets['openai_key']
 
-st.title('Personal AI Health Coach')
+st.title('Personal AI Health Coach by Ethan Castro')
 
 # Get user input
 sex = st.number_input('What is your sex? (if male put -5 or female put 161)', min_value = -5, max_value = 161)
