@@ -49,7 +49,7 @@ if st.button('Get advice'):
     
 # You can then format this prompt with the specific details:
 
-prompt = prompt_template.format(**user_data)
+    prompt = prompt_template.format(**user_data)
 print(response)  # Debug print statement
 
 
