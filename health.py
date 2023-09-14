@@ -50,17 +50,17 @@ if st.button('Get advice'):
 # You can then format this prompt with the specific details:
 
     prompt = prompt_template.format(**user_data)
-print(response)  # Debug print statement
-
-
-if response.choices:
-        print(response.choices[0])  # Debug print statement
-        print("Your BMR is:", bmr)
-
-if 'text' in response.choices[0]:
-            # Display AI response
-            st.write(response.choices[0].text.strip())
-
+    print(response)  # Debug print statement
+    
+    
+    if response.choices:
+            print(response.choices[0])  # Debug print statement
+            print("Your BMR is:", bmr)
+    
+    if 'text' in response.choices[0]:
+                # Display AI response
+                st.write(response.choices[0].text.strip())
+    
 
   
 
