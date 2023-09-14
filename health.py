@@ -28,7 +28,7 @@ if st.button('Get advice'):
     "{advice}."
      )
 
-user_data = {
+    user_data = {
     'age': age,  # Example age
     'weight': weight,  # Example weight in lbs
     'height': height,  # Example height in inches
@@ -38,15 +38,30 @@ user_data = {
     'advice': goal
 }
 
-response = openai.Completion.create(
-  model="text-davinci-003",
-  prompt = prompt_template.format(**user_data),
-  temperature=.5,
-  max_tokens=500,
-  top_p=1,
-  frequency_penalty=0,
-  presence_penalty=0
-)
+    response = openai.Completion.create(
+      model="text-davinci-003",
+      prompt = prompt_template.format(**user_data),
+      temperature=.5,
+      max_tokens=500,
+      top_p=1,
+      frequency_penalty=0,
+      presence_penalty=0
+    )
     
 # You can then format this prompt with the specific details:
+
+prompt = prompt_template.format(**user_data)
+print(response)  # Debug print statement
+
+
+if response.choices:
+        print(response.choices[0])  # Debug print statement
+        print("Your BMR is:", bmr)
+
+if 'text' in response.choices[0]:
+            # Display AI response
+            st.write(response.choices[0].text.strip())
+
+
+  
 
