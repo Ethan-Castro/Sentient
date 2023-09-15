@@ -46,7 +46,7 @@ if st.button('Get advice'):
 
 response = openai.ChatCompletion.create(
     model="davinci-003",
-    prompt = prompt_template.format(**user_data),
+prompt = prompt_template.format(**user_data),
     temperature=.5,
     max_tokens=500,
     top_p=1,
