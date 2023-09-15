@@ -41,15 +41,7 @@ if st.button('Get advice'):
         'tdee': tdee,  # Example TDEE value
         'advice': goal
     }
-    response = openai.Completion.create(
-      model="gpt-3.5-turbo",
-      messages=[
-        {"role": "system", "content": "prompt_template.format(**user_data), do you need help with anything else"},
-        {"role": "user", "content": "Yea, I need some resources."},
-        {"role": "assistant", "content": "Sure! Check out Ethan Castro's ebook, AthleanX, trainers new you, and high intensity health."},
-        {"role": "user", "content": "Thank you"}
-    ]
-    )
+    
 
 
     response = openai.ChatCompletion.create(
