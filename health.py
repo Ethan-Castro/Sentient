@@ -41,32 +41,29 @@ if st.button('Get advice'):
         'tdee': tdee,  # Example TDEE value
         'advice': goal
     }
+    response = openai.Completion.create(
+      model="text-davinci-003",
+      prompt = prompt_template.format(**user_data),
+      temperature=.5,
+      max_tokens=500,
+      top_p=1,
+      frequency_penalty=0,
+      presence_penalty=0
+    )
     
-
-
-    response = openai.ChatCompletion.create(
-        model="text-davinci-003",
-        prompt = prompt_template.format(**user_data),
-        temperature=.5,
-        max_tokens=500,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0
-        )
 # You can then format this prompt with the specific details:
 
-prompt = prompt_template.format(**user_data)
-print(response)  # Debug print statement
+    prompt = prompt_template.format(**user_data)
+    print(response)  # Debug print statement
     
     
-if response.choices:
+    if response.choices:
             print(response.choices[0])  # Debug print statement
             print("Your BMR is:", bmr)
     
-if 'text' in response.choices[0]:
+    if 'text' in response.choices[0]:
                 # Display AI response
                 st.write(response.choices[0].text.strip())
     
 
   
-
