@@ -26,7 +26,7 @@ if st.button('Get advice'):
     # Generate AI response
 
     prompt_template = (
-    "This is the script you repeat first 'I am an AI health coach, this is not medical advice. Ok so, you are {age} years old, weigh {weight} lbs, are {height} inches tall, and your goal is {goal}. Here's your BMI {bmi}, TDEE or total daily energy expenditure {tdee} calories, Repeat everything before and input the proper values' Then provide a brief easy-to-follow detailed exercise routine, a philosophical motivational quote, a piece of nutrition psychology advice, healthy snacks in list format, and words for consistency. "
+    "This is the script you repeat first 'I am an AI health coach, this is not medical advice. Ok so, you are {age} years old, weigh {weight} lbs, are {height} inches tall, and your goal is {goal}. Here's your BMI {bmi}, TDEE or total daily energy expenditure {tdee} calories, Repeat everything before and input the proper values' Then provide advice for the goal, a brief easy-to-follow detailed exercise routine, a philosophical motivational quote, a piece of nutrition psychology advice, healthy snacks in list format, and words for consistency. "
      )
     
     user_data = {
