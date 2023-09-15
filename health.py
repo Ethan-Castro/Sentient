@@ -6,15 +6,19 @@ openai.api_key = st.secrets['openai_key']
 st.title('Personal AI Health Coach by Ethan Castro')
 
 # Get user input
-sex = st.number_input('What is your sex? (if male put -5 or female put 161)', min_value = -5, max_value = 161)
+sex_choice = st.selectbox('What is your sex?', ['male', 'female'])
+if sex_choice == 'male':
+    sex = -5
+else:
+    sex = 161
 age = st.number_input('What is your age?', min_value=1, max_value=100)
 weight = st.number_input('What is your weight (in lbs)?', min_value=1)
 height = st.number_input('What is your height (inches)?', min_value=1)
 goal = st.text_input('What is your goal (can be anything health related)?')
 activity = st.number_input('Rate your activity level from sedentary to very active (from 1.2 - 1.9)?', min_value= 1.2, max_value = 1.9)
-bmi = weight / (height * height) * 703
-bmr = 10 * weight + 6.25 * height - 5 * age - sex
-tdee = bmr * activity
+bmi = round(weight / (height * height) * 703)
+bmr = round(10 * weight + 6.25 * height - 5 * age - sex)
+tdee = round(bmr * activity)
 
 
 
