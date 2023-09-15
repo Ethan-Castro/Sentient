@@ -42,15 +42,25 @@ if st.button('Get advice'):
         'advice': goal
     }
     response = openai.Completion.create(
-      model="text-davinci-003",
-      prompt = prompt_template.format(**user_data),
-      temperature=.5,
-      max_tokens=500,
-      top_p=1,
-      frequency_penalty=0,
-      presence_penalty=0
+      model="gpt-3.5-turbo",
+      messages=[
+        {"role": "system", "content": "prompt_template.format(**user_data), do you need help with anything else"},
+        {"role": "user", "content": "Yea, I need some resources."},
+        {"role": "assistant", "content": "Sure! Check out Ethan Castro's ebook, AthleanX, trainers new you, and high intensity health."},
+        {"role": "user", "content": "Thank you"}
+    ]
     )
-    
+
+
+    response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Who won the world series in 2020?"},
+        {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
+        {"role": "user", "content": "Where was it played?"}
+    ]
+)
 # You can then format this prompt with the specific details:
 
     prompt = prompt_template.format(**user_data)
