@@ -18,7 +18,7 @@ goal = st.text_input('What is your goal (can be anything health related)?')
 activity = st.number_input('Rate your activity level from sedentary (1) to very active (10)?', min_value=1, max_value=10)
 
 # Convert the 1-10 activity scale to 1.2-1.9 scale
-activity_transformed = 1.2 + (activity - 1) * .0778
+activity = 1.2 + (activity - 1) * .0778
 bmi = round(weight / (height * height) * 703)
 bmr = round(10 * weight + 6.25 * height - 5 * age - sex)
 tdee = round(bmr * activity)
