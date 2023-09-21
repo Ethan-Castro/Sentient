@@ -14,10 +14,7 @@ goal = st.text_input('What is your goal (can be career, mastery, money or relate
 name = st.text_input('What is your name so I know who I am talking to?')
 
 # Convert the 1-10 activity scale to 1.2-1.9 scale
-activity = 1.2 + (activity - 1) * .0778
-bmi = round(weight / (height * height) * 703)
-bmr = round(10 * weight + 6.25 * height - 5 * age - sex)
-tdee = round(bmr * activity)
+
 
 
 
