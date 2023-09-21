@@ -13,10 +13,6 @@ knowledge = st.number_input('How much do you already know nothing (1) to practic
 goal = st.text_input('What is your goal (can be career, mastery, money or related to something else)?')
 name = st.text_input('What is your name so I know who I am talking to?')
 
-
-
-
-
 if st.button('Get advice'):
     # Generate AI response
 
