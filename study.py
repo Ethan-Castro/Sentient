@@ -22,10 +22,10 @@ if st.button('Get advice'):
     
     user_data = {
         'name':name,
-        'goal': goal,  # Example age
-        'time': time,  # Example weight in lbs
-        'rigor': height,  # Example height in inches
-        'knowledge': knowledge,  # Example goal
+        'goal': goal,
+        'time': time, 
+        'rigor': rigor,  
+        'knowledge': knowledge,
         'advice': goal
     }
     response = openai.Completion.create(
