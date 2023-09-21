@@ -13,7 +13,6 @@ knowledge = st.number_input('How much do you already know nothing (1) to practic
 goal = st.text_input('What is your goal (can be career, mastery, money or related to something else)?')
 name = st.text_input('What is your name so I know who I am talking to?')
 
-# Convert the 1-10 activity scale to 1.2-1.9 scale
 
 
 
@@ -22,7 +21,7 @@ if st.button('Get advice'):
     # Generate AI response
 
     prompt_template = (
-    "This is the script you repeat first 'Hey {name}! /n I am your personal AI study coach, this is not professional advice, but it is helpful ;). Ok so, you want to learn about {goal} and you want to spend around {time} days learning it. Here's the study plan I have for you, Repeat everything before and input the proper values' Then provide advice for the goal, an easy-to follow detailed study plan, a philosophical motivational quote for fulfilling cognitive potential, a piece of advice on mind & body connection. Then end off with an encouraging message. "
+    "This is the script you repeat first 'Hey {name}! /n I am your personal AI study coach, this is not professional advice, but it is helpful ;). Okay, so you want to learn about {goal} and you want to spend around {time} days learning it. Here's the study plan I have for you, Repeat everything before and input the proper values' Then provide advice for the goal, an easy-to-follow detailed study plan, a philosophical motivational quote for fulfilling cognitive potential, and a piece of advice on mind & body connection. Then end off with an encouraging message. "
      )
     
     user_data = {
@@ -31,8 +30,6 @@ if st.button('Get advice'):
         'time': time,  # Example weight in lbs
         'rigor': height,  # Example height in inches
         'knowledge': knowledge,  # Example goal
-        'bmi': bmi,  # Example BMI value
-        'tdee': tdee,  # Example TDEE value
         'advice': goal
     }
     response = openai.Completion.create(
