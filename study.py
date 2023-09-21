@@ -17,7 +17,7 @@ if st.button('Get advice'):
     # Generate AI response
 
     prompt_template = (
-    "This is the script you repeat first 'Hey {name}! /n I am your personal AI study coach, this is not professional advice, but it is helpful ;). Okay, so you want to learn about {goal} and you want to spend around {time} days learning it. Here's the study plan I have for you, Repeat everything before and input the proper values' Then provide advice for the goal, an easy-to-follow detailed study plan, a philosophical motivational quote for fulfilling cognitive potential, and a piece of advice on mind & body connection. Then end off with an encouraging message. "
+    "This is the script you repeat first 'Hey {name}! /n I am your personal AI study coach, this is not professional advice, but it is helpful ;). Okay, so you want to learn about {goal} and you want to spend around {time} days learning it. Here's the study plan I have for you, Repeat everything before and input the proper values' Then provide advice for the goal, an easy-to-follow detailed study plan in a list format, a philosophical motivational quote for fulfilling cognitive potential, and a piece of advice on mind & body connection. Then end off with an encouraging message. "
      )
     
     user_data = {
