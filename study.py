@@ -44,9 +44,9 @@ if st.button('Get advice'):
     print(response)  # Debug print statement
     
     
-    if response.choices:
-            print(response.choices[0])  # Debug print statement
-            print("Your BMR is:", bmr)
+### if response.choices:
+#            print(response.choices[0])  # Debug print statement
+#            print("Your BMR is:", bmr)
     
     if 'text' in response.choices[0]:
                 # Display AI response
