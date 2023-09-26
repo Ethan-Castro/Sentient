@@ -36,13 +36,13 @@ def get_openai_response(user_message):
     },
     {
       "role": "assistant",
-      "content": "Absolutely, Ethan, to challenge yourself further: 
-1. Take Advanced Courses**: Consider higher-level or graduate courses if they seem easy.
-2. Online Courses**: Explore Ivy League courses on platforms like Coursera or edX.
-3. Research**: Join professors in their ongoing projects to experience cutting-edge work.
-4. Join Clubs**: Engage in academic clubs or professional societies related to your majors.
-5. Compete**: Participate in events like Hackathons or debates.
-6. Teach**: Deepen understanding by teaching or tutoring others."
+      "content": """Ethan, to challenge yourself:
+1. Take advanced or grad courses.
+2. Explore Ivy League online courses.
+3. Join research projects.
+4. Engage in academic clubs or societies.
+5. Participate in events like Hackathons.
+6. Teach or tutor."""
     }
   ],
   temperature=1,
