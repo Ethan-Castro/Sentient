@@ -28,8 +28,8 @@ if st.button('Get advice'):
         'knowledge': knowledge,
         'advice': goal
     }
-   
-   response = openai.ChatCompletion.create(
+    
+    response = openai.ChatCompletion.create(
        model="gpt-4",
        messages=[
     {
