@@ -36,7 +36,13 @@ def get_openai_response(user_message):
     },
     {
       "role": "assistant",
-      "content": "Absolutely, Ethan! Finding ways to challenge yourself and supplement your learning is an essential part of personal and academic growth. Here are some strategies that might help:\n\n1. **Enroll in Higher-Level Courses**: If your current coursework feels easy, consider taking more advanced classes if your school allows. You can also think about enrolling in graduate-level courses. \n\n2. **Online Courses:** There are numerous courses available online from Ivy League universities on platforms like Coursera and edX. You can take advanced classes related to Health & Nutrition Science or Computer Science to deepen your knowledge further.\n\n3. **Research Projects**: Reach out to your professors and express interest in doing research with them. Professors often have ongoing research projects and might appreciate some help. This could also give you a glimpse of the cutting-edge work being done in your field.\n\n4. **Join a Club or Society**: There might be academic clubs at your college related to your fields of study. If not, you can also look outside your school for professional societies.\n\n5. **Compete**: Intellectual competitions like Hackathons or Nutrition Science debates can be highly stimulating. They challenge you to apply what you've learned in novel ways.\n\n6. **Teach or Tutor**: Explaining concepts to others is one"
+      "content": "Absolutely, Ethan, to challenge yourself further: 
+1. Take Advanced Courses**: Consider higher-level or graduate courses if they seem easy.
+2. Online Courses**: Explore Ivy League courses on platforms like Coursera or edX.
+3. Research**: Join professors in their ongoing projects to experience cutting-edge work.
+4. Join Clubs**: Engage in academic clubs or professional societies related to your majors.
+5. Compete**: Participate in events like Hackathons or debates.
+6. Teach**: Deepen understanding by teaching or tutoring others."
     }
   ],
   temperature=1,
