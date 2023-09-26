@@ -1,74 +1,56 @@
 import openai
-import json
+import streamlit as st
 
-# Example dummy function hard coded to return the same weather
-# In production, this could be your backend API or an external API
-def get_current_weather(location, unit="fahrenheit"):
-    """Get the current weather in a given location"""
-    weather_info = {
-        "location": location,
-        "temperature": "72",
-        "unit": unit,
-        "forecast": ["sunny", "windy"],
+openai.api_key = st.secrets['openai_key']
+
+st.title('Personal Study Coach by Ethan Castro')
+
+# Get user input
+goal = st.text_input('What topic or subject do you want to study (literally anything!)?')
+time = st.number_input('How long do you want your study plan to be? (days)', min_value=1, max_value=365)
+rigor = st.number_input('How rigorous do you want this to be easy (1) to very rigorous (10)?', min_value=1, max_value=10)
+knowledge = st.number_input('How much do you already know nothing (1) to practically an expert (10)?', min_value=1, max_value=10)
+goal = st.text_input('What is your goal (can be career, mastery, money or related to something else)?')
+name = st.text_input('What is your name so I know who I am talking to?')
+
+if st.button('Get advice'):
+    # Generate AI response
+
+    prompt_template = (
+    "This is the script you repeat first 'Hey {name}! /n I am your personal AI study coach, this is not professional advice, but it is helpful ;). Okay, so you want to learn about {goal} and you want to spend around {time} days learning it. Here's the study plan I have for you, Repeat everything before and input the proper values' Then provide advice for the goal, an easy-to-follow detailed study plan in a vertical list format with each point being a day, a philosophical motivational quote for fulfilling cognitive potential, and a piece of advice on mind & body connection. Then end off with an encouraging message. "
+     )
+    
+    user_data = {
+        'name':name,
+        'goal': goal,
+        'time': time, 
+        'rigor': rigor,  
+        'knowledge': knowledge,
+        'advice': goal
     }
-    return json.dumps(weather_info)
-
-def run_conversation():
-    # Step 1: send the conversation and available functions to GPT
-    messages = [{"role": "user", "content": "What's the weather like in Boston?"}]
-    functions = [
-        {
-            "name": "get_current_weather",
-            "description": "Get the current weather in a given location",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "location": {
-                        "type": "string",
-                        "description": "The city and state, e.g. San Francisco, CA",
-                    },
-                    "unit": {"type": "string", "enum": ["celsius", "fahrenheit"]},
-                },
-                "required": ["location"],
-            },
-        }
-    ]
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-0613",
-        messages=messages,
-        functions=functions,
-        function_call="auto",  # auto is default, but we'll be explicit
+    response = openai.Completion.create(
+      model="text-davinci-003",
+      prompt = prompt_template.format(**user_data),
+      temperature=.5,
+      max_tokens=500,
+      top_p=1,
+      frequency_penalty=0,
+      presence_penalty=0
     )
-    response_message = response["choices"][0]["message"]
+    
+# You can then format this prompt with the specific details:
 
-    # Step 2: check if GPT wanted to call a function
-    if response_message.get("function_call"):
-        # Step 3: call the function
-        # Note: the JSON response may not always be valid; be sure to handle errors
-        available_functions = {
-            "get_current_weather": get_current_weather,
-        }  # only one function in this example, but you can have multiple
-        function_name = response_message["function_call"]["name"]
-        function_to_call = available_functions[function_name]
-        function_args = json.loads(response_message["function_call"]["arguments"])
-        function_response = function_to_call(
-            location=function_args.get("location"),
-            unit=function_args.get("unit"),
-        )
+    prompt = prompt_template.format(**user_data)
+    print(response)  # Debug print statement
+    
+    
+### if response.choices:
+#            print(response.choices[0])  # Debug print statement
+#            print("Your BMR is:", bmr)
+    
+    if 'text' in response.choices[0]:
+                # Display AI response
+                st.write(response.choices[0].text.strip())
+    
 
-        # Step 4: send the info on the function call and function response to GPT
-        messages.append(response_message)  # extend conversation with assistant's reply
-        messages.append(
-            {
-                "role": "function",
-                "name": function_name,
-                "content": function_response,
-            }
-        )  # extend conversation with function response
-        second_response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo-0613",
-            messages=messages,
-        )  # get a new response from GPT where it can see the function response
-        return second_response
-
-print(run_conversation())
+  
