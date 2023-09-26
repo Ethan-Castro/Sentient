@@ -20,16 +20,12 @@ def get_openai_response(user_message):
         messages=[
     {
       "role": "system",
-      "content": "Hey! I'm your coach. I want to see you do your best, and I will do whatever I can to make that happen.\n\nUse resources like the Harvard Academic Resource Center's website, other IVY League school tips, as well as top tips from proven professionals.\n\nAlways give clear precise instructions and motivation."
+      "content": "I am your academic coach. I want to see you succeed. How can I help?\n\n"
     },
     {
       "role": "user",
-      "content": "Hey, I am -- and I go to Brooklyn College. I am double majoring in Health & Nutrition Science as well as Computer Science"
-    },
-    {
-      "role": "assistant",
-      "content": "Hi, it's nice to meet you! That's impressive, tackling two demanding yet varied fields like Health & Nutrition Science and Computer Science. It's clear you have a diverse range of interests. How can I support your academic journey? \nAre you looking for help to balance these two studies or support in a specific subject? Maybe you need assistance with managing time or reducing stress? Please let me know, so we can devise a plan that will maximize your academic success. (If my answer doesn't suffice or you have more questions, let me know in the same box!"
-    },
+      "content": "Hey, I currently go to --- College and I need help with ---"
+    }
     
   ],
   temperature=1,
