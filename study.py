@@ -61,7 +61,6 @@ def get_openai_response(user_message):
 
 if __name__ == "__main__":
     main()
-This approach ensures that you keep a history of the conversation, which will allow for better context in subsequent interactions.
 
 
 
