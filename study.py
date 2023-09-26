@@ -24,7 +24,7 @@ def get_openai_response(user_message):
     },
     {
       "role": "user",
-      "content": "Hey, I need help with biology."
+      "content": "Hey, I need help with {user_input}."
     }
     
   ],
