@@ -41,7 +41,7 @@ def get_openai_response(user_message):
 )
     return response.choices[0].message['content']
      user_input = st.text_input("Hey! What else would you like help on.")
-    if user_input:
+if user_input:
         response = get_openai_response(user_input)
         st.write(f"Bot: {response}")
 
