@@ -24,7 +24,7 @@ def get_openai_response(user_message):
     },
     {
       "role": "user",
-      "content": "I need help with math"
+      "content": "I need help with "
     }
   ],
   temperature=1,
