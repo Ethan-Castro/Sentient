@@ -13,7 +13,7 @@ if 'messages' not in st.session_state:
     },
     {
         "role": "user",
-        "content": "I need help with precalculus."
+        "content": "I need help with calculus."
     },
     {
     "role": "assistant",
