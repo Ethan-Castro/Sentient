@@ -42,7 +42,7 @@ def main():
             "content": response_content
         })
         
-        st.write(f"Bot: {response_content}")
+        st.write(f"{response_content}")
 
 def get_openai_response(user_message):
     """Get a response from OpenAI's GPT-4 model using the ChatCompletion method."""
