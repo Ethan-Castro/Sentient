@@ -17,8 +17,19 @@ if 'messages' not in st.session_state:
     },
     {
     "role": "assistant",
-    "content": "I can most def help with that! Whether you’re struggling with limits, derivatives, integrals, or any other calculus topics, feel free to ask, and I’ll do my best to assist you. If you have a specific question or topic in mind, please provide more details, and I can offer more tailored support or resources.\nIf you're looking for general advice or resources, here are a few suggestions:\nUnderstand the Basics: Make sure you have a solid understanding of the fundamental concepts of calculus such as limits, continuity, and derivatives before moving on to more advanced topics.\nPractice Problems: Regularly solving problems is crucial in calculus. Textbooks, online resources, and calculus apps often have a variety of problems to work through.\nOnline Resources: Websites like Khan Academy and Coursera offer free courses on calculus, which can help supplement your learning.\nStudy Groups: Collaborating with peers can provide different perspectives and can be helpful for understanding challenging concepts.\nOffice Hours: Utilizing professor or TA office hours can be beneficial for clarifying doubts and receiving additional support.\nLet me know how you would prefer to proceed, and I'll do my best to assist you!"
-}
+    "content": "It's great to connect with you! Here's how I can assist:
+
+📘 **Foundational Understanding**: Grasp key concepts in calculus like limits, continuity, and derivatives. A strong base ensures smooth learning ahead.
+
+📝 **Practice Makes Perfect**: Dive into diverse problem sets. The more you practice, the clearer concepts become. I can suggest resources or even quiz you!
+
+🌐 **Explore Online Resources**: Platforms like Khan Academy and Coursera have fantastic calculus courses. They can complement your current studies.
+
+🤝 **Collaborative Learning**: Consider joining or forming study groups. Different perspectives can unveil new insights.
+
+👩‍🏫 **Office Hours**: Make the most of your professor or TA's office hours. It's a golden opportunity to clarify doubts.
+
+What would you like to focus on, or do you have another academic concern?"}
 
 ]
 
