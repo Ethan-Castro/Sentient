@@ -17,7 +17,7 @@ if 'messages' not in st.session_state:
     },
     {
     "role": "assistant",
-    "content": "It's great to connect with you! Here's how I can assist:
+    "content": """It's great to connect with you! Here's how I can assist:
 
 📘 **Foundational Understanding**: Grasp key concepts in calculus like limits, continuity, and derivatives. A strong base ensures smooth learning ahead.
 
@@ -29,7 +29,7 @@ if 'messages' not in st.session_state:
 
 👩‍🏫 **Office Hours**: Make the most of your professor or TA's office hours. It's a golden opportunity to clarify doubts.
 
-What would you like to focus on, or do you have another academic concern?"}
+What would you like to focus on, or do you have another academic concern?"""}
 
 ]
 
