@@ -35,7 +35,7 @@ What would you like to focus on, or do you have another academic concern?"""}
 
 def main():
     st.title("Academic Coach Chatbot")
-    st.write("My mission is to help you excel academically, regardless of your current setting.")
+    st.write("My Mission: Help you excel academically, regardless of your current setting.")
     
     user_input = st.text_input("Hey! In the box below introduce yourself, and let me know what you need help with. \n You can chat back and forth as well. It may take up to 20 seconds to get an answer.")
     if user_input:
