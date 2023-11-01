@@ -38,10 +38,10 @@ if 'messages' not in st.session_state:
   ]
 
 def main():
-    st.title("Academic Coach Chatbot")
-    st.write("My Mission: Help you excel academically, regardless of your current setting.")
+    st.title("QuAIlia")
+    st.write("My Mission: Augment with You.")
     
-    user_input = st.text_input("Hey! In the box below introduce yourself, and let me know what you need help with. \n You can chat back and forth as well. It may take up to 20 seconds to get an answer.")
+    user_input = st.text_input("Hello, I am here to discuss whatever you'd like. \n ")
     if user_input:
         # Append user's message to the conversation history
         st.session_state.messages.append({
